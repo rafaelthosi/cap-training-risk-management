@@ -1,3 +1,5 @@
+using { BusinessPartnerA2X } from './external/BusinessPartnerA2X.cds';
+
 using { rmt as my } from '../db/schema';
 
 service RiskManagementService
@@ -11,4 +13,16 @@ service RiskManagementService
     @odata.draft.enabled
     entity Mitigations as
         projection on my.Mitigations;
+
+    @cds.redirection.target
+    entity A_BusinessPartner as
+        projection on BusinessPartnerA2X.A_BusinessPartner
+        {
+            BusinessPartner,
+            Customer,
+            Supplier,
+            BusinessPartnerCategory,
+            BusinessPartnerFullName,
+            BusinessPartnerGrouping
+        };
 }

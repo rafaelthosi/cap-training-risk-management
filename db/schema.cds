@@ -1,5 +1,6 @@
-
 namespace rmt;
+
+using { BusinessPartnerA2X } from '../srv/external/BusinessPartnerA2X.cds';
 
 entity Risks
 {
@@ -10,6 +11,7 @@ entity Risks
     impact : Integer;
     criticality : Integer;
     mitigations : Association to one Mitigations;
+    a_BusinessPartner : Association to one BusinessPartnerA2X.A_BusinessPartner;
 }
 
 entity Mitigations
