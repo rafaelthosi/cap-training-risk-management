@@ -15,3 +15,4 @@ cds add nodejs
 npm i
 ```
 - No storyboard, criar Service e DataModel. Isto criará o arquivo db/schema.cds e srv/service.cds
+- Criar External Service (Utilizando Service Center) e conectar no SAP Business Accelerator Hub para utilizar Business Partner API de Sandbox
